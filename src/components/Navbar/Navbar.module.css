@@ -1,0 +1,216 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%; /* 10% left/right spacing */
+  background: #1c1c1c;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem; /* increase font size for all text inside navbar */
+}
+
+.logo {
+  position: relative;
+  width: 250px;     /* keep width fixed */
+  height: auto;     /* let height adjust */
+}
+
+/* Optional for <img> fallback, can remove if using next/image */
+.logo-img {
+  width: auto;
+  display: flex;
+}
+
+/* Nav links container */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* a little more space between nav items */
+}
+
+/* Each nav item */
+.navLinks li {
+  position: relative;
+}
+
+/* Link styling */
+.navLinks a {
+  text-decoration: none;
+  color: #fa750a; /* your brand color */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1.3rem; /* increase font size for links */
+}
+
+/* Hover underline animation */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: black;  /* underline color */
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: black;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown styling */
+.hasDropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  border: 3px solid #fa750a; /* add border around dropdown */
+  border-radius: 8px; /* rounded corners */
+  min-width: 200px;
+}
+
+.hasDropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  margin: 0.5rem 0;
+}
+
+.dropdown a {
+  color: #333;
+  font-weight: 500; /* slightly bolder for readability */
+  font-size: 1.3rem; /* bigger font in dropdown */
+}
+
+.dropdown a:hover {
+  color: #fa750a; /* dropdown hover accent */
+}
+/* hamburger button wrapper (hidden on desktop) */
+.hamburgerBtn {
+  display: none;
+  position: sticky;
+  top: 3rem;
+  right: 1rem;
+  z-index: 1200;      /* higher than the full-screen menu */
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+}
+
+/* little focus outline for accessibility */
+.hamburgerBtn:focus {
+  outline: 2px solid rgba(250,117,10,0.18);
+  border-radius: 6px;
+}
+
+/* the three-bar hamburger (container inside the button) */
+.hamburger {
+  width: 32px;
+  height: 24px;
+  position: sticky;
+  display: block;
+}
+
+/* each bar */
+.hamburger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #fa750a;
+  border-radius: 3px;
+  transition: transform 0.35s cubic-bezier(.2,.7,.2,1), opacity 0.2s ease;
+  transform-origin: center;
+}
+
+/* placement of each bar */
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* OPEN state: move top & bottom to center and rotate to X; fade middle */
+.hamburger.open span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* show hamburger on mobile and adjust z-order */
+@media screen and (max-width: 768px) {
+  .hamburgerBtn {
+    display: block;
+  }
+
+  /* full-screen mobile menu */
+  .navLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ececec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transform: translateX(100%); /* hide to the right */
+    transition: transform 0.35s ease;
+    z-index: 1100; /* below the hamburgerBtn (1200) so X is clickable */
+  }
+
+  /* when active, slide into view */
+  .active {
+    transform: translateX(0);
+  }
+
+  .navLinks li {
+    font-size: 2rem;
+  }
+
+  /* dropdown inside mobile menu */
+  .hasDropdown .dropdown {
+    position: static;
+    border: 2px solid #fa750a;
+    box-shadow: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .dropdown li {
+    margin: 1rem 0;
+  }
+  .navbar {
+    padding: 1rem 0.5rem; /* 10% left/right spacing */
+  }
+}
