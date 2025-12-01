@@ -82,7 +82,7 @@ const ContactForm = () => {
           <p className={styles.eyebrow}>Get in touch</p>
           <h2>Tell us about your roof.</h2>
           <p>
-            Share a few details and we’ll respond within one business day with next steps. No spam,
+            Share a few details and we’ll respond within 3-5 business days with next steps. No spam,
             just straight answers from our roofing pros.
           </p>
         </div>
@@ -203,7 +203,7 @@ const ContactForm = () => {
             )}
 
             <p className={styles.footnote}>
-              We reply within one business day. Your info stays private and is only used to contact
+              We reply within 3-5 business days. Your info stays private and is only used to contact
               you about your request.
             </p>
           </form>

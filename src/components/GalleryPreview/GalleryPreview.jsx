@@ -20,7 +20,7 @@ const GalleryPreview = () => {
         <h2 id="gallery-heading" className={styles.heading}>
           Our Portfolio
         </h2>
-        <Link href="/projects" className={styles.button}>
+        <Link href="/portfolio" className={styles.button}>
           View All Projects
         </Link>
       </div>

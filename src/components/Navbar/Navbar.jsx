@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className={styles.navbar} role="navigation" aria-label="Main Navigation">
@@ -40,27 +41,27 @@ export default function Navbar() {
 
       <ul id="primary-navigation" className={`${styles.navLinks} ${menuOpen ? styles.active : ""}`}>
         <li>
-          <Link href="/">
+          <Link href="/" onClick={handleLinkClick}>
             <FaHome className={styles.icon} /> Home
           </Link>
         </li>
         <li className={styles.hasDropdown}>
-          <Link href="/services">
+          <Link href="/services" onClick={handleLinkClick}>
             <FaTools className={styles.icon} /> Services
           </Link>
           <ul className={styles.dropdown}>
-            <li><Link href="/services/architectural-shingles">Architectural Shingles</Link></li>
-            <li><Link href="/services/metal-roofs">Metal Roofs</Link></li>
-            <li><Link href="/services/roof-repairs">Roof Repairs</Link></li>
+            <li><Link href="/services/architectural-shingles" onClick={handleLinkClick}>Architectural Shingles</Link></li>
+            <li><Link href="/services/metal-roofs" onClick={handleLinkClick}>Metal Roofs</Link></li>
+            <li><Link href="/services/roof-repairs" onClick={handleLinkClick}>Roof Repairs</Link></li>
           </ul>
         </li>
         <li>
-          <Link href="/portfolio">
+          <Link href="/portfolio" onClick={handleLinkClick}>
             <FaImages className={styles.icon} /> Portfolio
           </Link>
         </li>
         <li>
-          <Link href="/contact">
+          <Link href="/contact" onClick={handleLinkClick}>
             <FaEnvelope className={styles.icon} /> Contact
           </Link>
         </li>

@@ -1,5 +1,6 @@
 import { DefaultSeo } from 'next-seo';
 import Navbar from '../components/Navbar/Navbar'; // make sure the path is correct
+import Footer from '../components/Footer/Footer';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Navbar /> {/* Added here so it's global */}
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

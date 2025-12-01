@@ -1,0 +1,229 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.5rem 1.75rem;
+  background: radial-gradient(circle at 20% 20%, rgba(250, 117, 10, 0.16), transparent 42%),
+              radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.08), transparent 40%),
+              #0f0f0f;
+  color: #f7f7f7;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.35);
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin: 0 0 0.35rem;
+  color: #fa750a;
+  font-weight: 700;
+}
+
+.topBar h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.8rem;
+}
+
+.lede {
+  margin: 0;
+  max-width: 560px;
+  color: #d6d6d6;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.primaryCta,
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryCta {
+  background: linear-gradient(120deg, #fa750a, #ff9a3d);
+  color: #0f0f0f;
+  border: 2px solid #fa750a;
+  box-shadow: 0 10px 24px rgba(250, 117, 10, 0.35);
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(250, 117, 10, 0.45);
+}
+
+.secondaryCta {
+  color: #f7f7f7;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.secondaryCta:hover {
+  border-color: #fa750a;
+  color: #fa750a;
+}
+
+.grid {
+  margin: 2.75rem auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+  max-width: 1200px;
+}
+
+.grid h3,
+.grid h4 {
+  margin: 0 0 0.75rem;
+  color: #ffffff;
+}
+
+.grid p {
+  margin: 0 0 1rem;
+  color: #d6d6d6;
+  line-height: 1.6;
+}
+
+.brandBlock {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+  color: #e8e8e8;
+}
+
+.contactItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contactItem a:hover {
+  color: #fa750a;
+}
+
+.socialRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.socialRow a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.socialRow a:hover {
+  transform: translateY(-3px);
+  background: #fa750a;
+  color: #0f0f0f;
+  border-color: #fa750a;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.linkList a {
+  color: #d6d6d6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.linkList a:hover {
+  color: #fa750a;
+}
+
+.areaText {
+  margin: 0 0 0.75rem;
+  color: #d6d6d6;
+}
+
+.bottomRow {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  color: #bcbcbc;
+}
+
+.badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f7f7f7;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 2.8rem 1.1rem 1.25rem;
+  }
+
+  .topBar h2 {
+    font-size: 1.5rem;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

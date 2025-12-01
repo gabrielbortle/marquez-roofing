@@ -7,7 +7,7 @@ export default function Contact() {
     <>
       <NextSeo
         title="Contact Marquez Roofing | Book a Roof Consultation"
-        description="Reach out for architectural shingles, metal roofs, or roof repairs in Cache Valley. Share your project details and we'll respond within one business day."
+        description="Reach out for architectural shingles, metal roofs, or roof repairs in Cache Valley. Share your project details and we'll respond within 3-5 business days."
         canonical="https://marquezroofing.com/contact"
         openGraph={{
           url: 'https://marquezroofing.com/contact',
@@ -23,7 +23,7 @@ export default function Contact() {
           <h1>Book a roofing consult in Cache Valley.</h1>
           <p className={styles.lede}>
             Tell us about your roof, timeline, and goals. A Marquez Roofing specialist will reply
-            within one business day with next steps.
+            within 3-5 business days with next steps.
           </p>
           <div className={styles.badges}>
             <span>Licensed & insured</span>

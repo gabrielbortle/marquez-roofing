@@ -46,6 +46,7 @@ const Services = () => {
             title={service.title}
             description={service.description}
             image={service.image}
+            slug={service.slug}
             as={motion.article} // make ServiceCard animatable
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
