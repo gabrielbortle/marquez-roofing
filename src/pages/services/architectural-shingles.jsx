@@ -1,7 +1,7 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
-import { NextSeo } from 'next-seo';
-import { SITE_URL } from '@/lib/seo';
+import { NextSeo, ServiceJsonLd } from 'next-seo';
+import { SITE_URL, BUSINESS_NAME, PHONE_NUMBER, GEO_SERVICE_AREA, LOGO_URL } from '@/lib/seo';
 
 const highlights = [
   {
@@ -59,6 +59,19 @@ export default function ArchitecturalShinglesPage() {
             content: 'architectural shingles Logan Utah, Cache Valley roofing, shingle roof replacement, ice and water shield, roof ventilation Logan UT',
           },
         ]}
+      />
+
+      <ServiceJsonLd
+        type="RoofingContractor"
+        url={`${SITE_URL}/services/architectural-shingles`}
+        serviceType="Architectural shingle roofing"
+        provider={{
+          '@type': 'LocalBusiness',
+          name: BUSINESS_NAME,
+          image: LOGO_URL,
+          telephone: PHONE_NUMBER,
+        }}
+        areaServed={[GEO_SERVICE_AREA]}
       />
 
       <ServiceHero

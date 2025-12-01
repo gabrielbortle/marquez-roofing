@@ -1,7 +1,7 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
-import { NextSeo } from 'next-seo';
-import { SITE_URL } from '@/lib/seo';
+import { NextSeo, ServiceJsonLd } from 'next-seo';
+import { SITE_URL, BUSINESS_NAME, PHONE_NUMBER, GEO_SERVICE_AREA, LOGO_URL } from '@/lib/seo';
 
 const highlights = [
   {
@@ -59,6 +59,19 @@ export default function MetalRoofsPage() {
             content: 'metal roof Logan Utah, standing seam Cache Valley, snow retention roofing, metal roofing contractor Logan UT, high temp underlayment',
           },
         ]}
+      />
+
+      <ServiceJsonLd
+        type="RoofingContractor"
+        url={`${SITE_URL}/services/metal-roofs`}
+        serviceType="Metal roofing (standing seam, snow retention, high-temp underlayment)"
+        provider={{
+          '@type': 'LocalBusiness',
+          name: BUSINESS_NAME,
+          image: LOGO_URL,
+          telephone: PHONE_NUMBER,
+        }}
+        areaServed={[GEO_SERVICE_AREA]}
       />
 
       <ServiceHero
