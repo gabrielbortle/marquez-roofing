@@ -1,7 +1,6 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
 import { NextSeo } from 'next-seo';
-import { SITE_URL } from '@/lib/seo';
 
 const highlights = [
   {
@@ -31,27 +30,17 @@ const serviceAreas = [
 ];
 
 export default function MetalRoofsPage() {
-  const ogImage = `${SITE_URL}/images/metal-roof.jpg`;
-
   return (
     <>
       <NextSeo
         title="Metal Roofing in Cache Valley & Logan Utah | Marquez Roofing"
         description="Standing seam and metal roofing for homes and cabins in Logan and Cache Valley. Snow retention, high-temp underlayment, and precision flashings built for Utah winters."
-        canonical={`${SITE_URL}/services/metal-roofs`}
+        canonical="https://marquezroofing.com/services/metal-roofs"
         openGraph={{
-          url: `${SITE_URL}/services/metal-roofs`,
+          url: 'https://marquezroofing.com/services/metal-roofs',
           title: 'Metal Roofing | Marquez Roofing',
           description:
             'Cache Valley metal roofs with standing seam panels, snow guards, and ice dam protection for Logan area homes.',
-          images: [
-            {
-              url: ogImage,
-              width: 1200,
-              height: 630,
-              alt: 'Standing seam metal roof installed in Cache Valley',
-            },
-          ],
         }}
         additionalMetaTags={[
           {

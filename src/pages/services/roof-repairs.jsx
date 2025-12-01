@@ -1,7 +1,6 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
 import { NextSeo } from 'next-seo';
-import { SITE_URL } from '@/lib/seo';
 
 const highlights = [
   {
@@ -31,27 +30,17 @@ const serviceAreas = [
 ];
 
 export default function RoofRepairsPage() {
-  const ogImage = `${SITE_URL}/images/roof-repair.jpg`;
-
   return (
     <>
       <NextSeo
         title="Roof Repairs in Cache Valley & Logan Utah | Marquez Roofing"
         description="Leak repairs, storm damage fixes, and emergency tarping for homes in Logan and Cache Valley, Utah. Fast local response with lasting solutions."
-        canonical={`${SITE_URL}/services/roof-repairs`}
+        canonical="https://marquezroofing.com/services/roof-repairs"
         openGraph={{
-          url: `${SITE_URL}/services/roof-repairs`,
+          url: 'https://marquezroofing.com/services/roof-repairs',
           title: 'Roof Repairs | Marquez Roofing',
           description:
             'Cache Valley roof repair specialists for leaks, wind damage, and ice issues in Logan, Utah.',
-          images: [
-            {
-              url: ogImage,
-              width: 1200,
-              height: 630,
-              alt: 'Roof repair project completed in Logan, Utah',
-            },
-          ],
         }}
         additionalMetaTags={[
           {

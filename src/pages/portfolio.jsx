@@ -6,7 +6,6 @@ import { NextSeo } from 'next-seo';
 import PortfolioHero from '@/components/PortfolioHero/PortfolioHero';
 import PortfolioGallery from '@/components/PortfolioGallery/PortfolioGallery';
 import { galleryCategories } from '@/data/galleryCategories';
-import { SITE_URL } from '@/lib/seo';
 
 const allowedImageExtensions = new Set([
   '.jpg',
@@ -142,19 +141,18 @@ export async function getStaticProps() {
 }
 
 export default function Portfolio({ galleryItems }) {
-  const ogImagePath =
+  const ogImage =
     galleryItems.find(item => item.mediaType === 'image')?.src ||
     '/images/portfolioImage1.jpg';
-  const ogImage = `${SITE_URL}${encodeURI(ogImagePath)}`;
 
   return (
     <>
       <NextSeo
         title="Roofing Portfolio | Marquez Roofing in Cache Valley, UT"
         description="Browse recent architectural shingles, metal roofs, and roof repair projects across Cache Valley. See why homeowners trust Marquez Roofing."
-        canonical={`${SITE_URL}/portfolio`}
+        canonical="https://marquezroofing.com/portfolio"
         openGraph={{
-          url: `${SITE_URL}/portfolio`,
+          url: 'https://marquezroofing.com/portfolio',
           title: 'Roofing Portfolio | Marquez Roofing',
           description:
             'Explore architectural shingles, metal roofs, and repair projects completed by Marquez Roofing in Cache Valley, Utah.',
