@@ -1,6 +1,7 @@
 import { DefaultSeo, LocalBusinessJsonLd } from 'next-seo';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import {
   SITE_URL,
   BUSINESS_NAME,
@@ -62,6 +63,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Navbar />
       <Component {...pageProps} />
+      <SpeedInsights />
       <Footer />
     </>
   );
