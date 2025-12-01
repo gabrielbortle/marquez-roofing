@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.actions}>
-          <a className={styles.primaryCta} href="tel:4355551212">
+          <a className={styles.primaryCta} href="tel:14357701027">
             Call the crew
           </a>
           <Link className={styles.secondaryCta} href="/contact">
@@ -35,7 +35,7 @@ const Footer = () => {
           </p>
           <div className={styles.contactItem}>
             <FaPhoneAlt aria-hidden="true" />
-            <a href="tel:4355551212">(435) 555-1212</a>
+            <a href="tel:14357701027">(435) 770-1027</a>
           </div>
           <div className={styles.contactItem}>
             <FaEnvelope aria-hidden="true" />

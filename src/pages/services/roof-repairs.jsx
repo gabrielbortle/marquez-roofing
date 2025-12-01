@@ -1,6 +1,6 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
-import { NextSeo, ServiceJsonLd } from 'next-seo';
+import { NextSeo } from 'next-seo';
 import { SITE_URL, BUSINESS_NAME, PHONE_NUMBER, GEO_SERVICE_AREA, LOGO_URL } from '@/lib/seo';
 
 const highlights = [
@@ -32,6 +32,29 @@ const serviceAreas = [
 
 export default function RoofRepairsPage() {
   const ogImage = `${SITE_URL}/images/roof-repair.jpg`;
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Roof repair and storm damage service',
+    url: `${SITE_URL}/services/roof-repairs`,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: BUSINESS_NAME,
+      image: LOGO_URL,
+      telephone: PHONE_NUMBER,
+    },
+    areaServed: [
+      {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: GEO_SERVICE_AREA.geoMidpoint.latitude,
+          longitude: GEO_SERVICE_AREA.geoMidpoint.longitude,
+        },
+        geoRadius: GEO_SERVICE_AREA.geoRadius,
+      },
+    ],
+  };
 
   return (
     <>
@@ -61,17 +84,9 @@ export default function RoofRepairsPage() {
         ]}
       />
 
-      <ServiceJsonLd
-        type="RoofingContractor"
-        url={`${SITE_URL}/services/roof-repairs`}
-        serviceType="Roof repair and storm damage service"
-        provider={{
-          '@type': 'LocalBusiness',
-          name: BUSINESS_NAME,
-          image: LOGO_URL,
-          telephone: PHONE_NUMBER,
-        }}
-        areaServed={[GEO_SERVICE_AREA]}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       <ServiceHero

@@ -2,8 +2,8 @@ export const SITE_URL = 'https://marquezroofing.com';
 export const BUSINESS_NAME = 'A&L Marquez Roofing';
 export const DEFAULT_DESCRIPTION =
   'Cache Valley roofing company specializing in architectural shingles, metal roofs, and roof repairs for Logan, Utah homeowners.';
-export const PHONE_NUMBER = '+14355551212';
-export const PHONE_DISPLAY = '(435) 555-1212';
+export const PHONE_NUMBER = '+14357701027';
+export const PHONE_DISPLAY = '(435) 770-1027';
 export const SERVICE_AREA = 'Cache Valley & Logan, Utah';
 export const GEO_SERVICE_AREA = {
   geoMidpoint: {
