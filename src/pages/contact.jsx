@@ -1,6 +1,7 @@
 import { NextSeo } from 'next-seo';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import styles from '@/styles/ContactPage.module.css';
+import { SITE_URL, DEFAULT_OG_IMAGE } from '@/lib/seo';
 
 export default function Contact() {
   return (
@@ -8,12 +9,20 @@ export default function Contact() {
       <NextSeo
         title="Contact Marquez Roofing | Book a Roof Consultation"
         description="Reach out for architectural shingles, metal roofs, or roof repairs in Cache Valley. Share your project details and we'll respond within 3-5 business days."
-        canonical="https://marquezroofing.com/contact"
+        canonical={`${SITE_URL}/contact`}
         openGraph={{
-          url: 'https://marquezroofing.com/contact',
+          url: `${SITE_URL}/contact`,
           title: 'Contact Marquez Roofing | Roof Consultation',
           description:
             'Schedule a roofing consultation for shingles, metal, or repairs across Cache Valley, Utah.',
+          images: [
+            {
+              url: DEFAULT_OG_IMAGE,
+              width: 1200,
+              height: 630,
+              alt: 'Marquez Roofing contact team in Cache Valley',
+            },
+          ],
         }}
       />
 

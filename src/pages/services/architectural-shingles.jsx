@@ -1,6 +1,7 @@
 import ServiceHero from '@/components/Services/ServiceHero';
 import ServicePageContent from '@/components/Services/ServicePageContent';
 import { NextSeo } from 'next-seo';
+import { SITE_URL } from '@/lib/seo';
 
 const highlights = [
   {
@@ -30,17 +31,27 @@ const serviceAreas = [
 ];
 
 export default function ArchitecturalShinglesPage() {
+  const ogImage = `${SITE_URL}/images/architectural-shingles.jpg`;
+
   return (
     <>
       <NextSeo
         title="Architectural Shingle Roofing in Cache Valley & Logan | Marquez Roofing"
         description="Architectural shingle roof installations and replacements in Logan and Cache Valley, Utah. Wind-rated systems, ice and water protection, and designer curb appeal."
-        canonical="https://marquezroofing.com/services/architectural-shingles"
+        canonical={`${SITE_URL}/services/architectural-shingles`}
         openGraph={{
-          url: 'https://marquezroofing.com/services/architectural-shingles',
+          url: `${SITE_URL}/services/architectural-shingles`,
           title: 'Architectural Shingles | Marquez Roofing',
           description:
             'Cache Valley and Logan, Utah architectural shingle roofing. Storm-ready installs, ridge ventilation, and clean worksites.',
+          images: [
+            {
+              url: ogImage,
+              width: 1200,
+              height: 630,
+              alt: 'Architectural shingle roof by Marquez Roofing in Cache Valley',
+            },
+          ],
         }}
         additionalMetaTags={[
           {

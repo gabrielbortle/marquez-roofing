@@ -24,7 +24,5 @@ pnpm-debug.log*
 .DS_Store
 
 # big media (optional)
-*.mp4
-*.mov
 *.avi
 *.psd
