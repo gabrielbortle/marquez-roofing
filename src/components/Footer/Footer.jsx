@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           <div className={styles.contactItem}>
             <FaEnvelope aria-hidden="true" />
-            <a href="mailto:info@marquezroofing.com">info@marquezroofing.com</a>
+            <a href="mailto:adrianmarquezroofingllc@gmail.com">adrianmarquezroofingllc@gmail.com</a>
           </div>
           <div className={styles.contactItem}>
             <FaLocationArrow aria-hidden="true" />

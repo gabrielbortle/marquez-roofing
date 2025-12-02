@@ -36,7 +36,7 @@ export default async function handler(req, res) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const toEmail = process.env.CONTACT_TO_EMAIL;
+  const toEmail = process.env.CONTACT_TO_EMAIL || 'adrianmarquezroofingllc@gmail.com';
   const fromEmail =
     process.env.CONTACT_FROM_EMAIL || 'Marquez Roofing <notifications@marquezroofing.com>';
 
