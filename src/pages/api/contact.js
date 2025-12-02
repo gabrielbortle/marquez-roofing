@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.CONTACT_TO_EMAIL || 'adrianmarquezroofingllc@gmail.com';
   const fromEmail =
-    process.env.CONTACT_FROM_EMAIL || 'Marquez Roofing <notifications@marquezroofs.com>';
+    process.env.CONTACT_FROM_EMAIL || 'Marquez Roofing <onboarding@resend.dev>';
 
   if (!apiKey || !toEmail) {
     return res.status(500).json({ message: 'Contact form email is not configured.' });
