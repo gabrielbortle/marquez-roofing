@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://marquezroofing.com';
+export const SITE_URL = 'https://marquezroofs.com';
 export const BUSINESS_NAME = 'A&L Marquez Roofing';
 export const DEFAULT_DESCRIPTION =
   'Cache Valley roofing company specializing in architectural shingles, metal roofs, and roof repairs for Logan, Utah homeowners.';

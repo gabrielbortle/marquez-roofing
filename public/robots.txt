@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marquezroofing.com/sitemap.xml
+Sitemap: https://marquezroofs.com/sitemap.xml
