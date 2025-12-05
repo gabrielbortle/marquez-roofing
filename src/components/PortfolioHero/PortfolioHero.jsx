@@ -5,18 +5,22 @@ import styles from '../PortfolioHero/PortfolioHero.module.css';
 
 const AnimatedStat = ({ value, label, delay = 0 }) => {
   const count = useMotionValue(0);
-  const rounded = useTransform(count, latest => Math.floor(latest));
   const ref = useRef(null);
+  const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    const animation = animate(count, value, { duration: 2, delay, ease: 'easeOut' });
-    return animation.stop;
+    const controls = animate(count, value, { duration: 2, delay, ease: 'easeOut' });
+    return controls.stop;
   }, [count, value, delay]);
+
+  useMotionValueEvent(count, 'change', latest => {
+    setDisplay(Math.floor(latest));
+  });
 
   return (
     <div className={styles.statBox} ref={ref}>
       <motion.span className={styles.statNumber}>
-        {rounded}
+        {display}
         <span className={styles.statPlus}>+</span>
       </motion.span>
       <p className={styles.statLabel}>{label}</p>
