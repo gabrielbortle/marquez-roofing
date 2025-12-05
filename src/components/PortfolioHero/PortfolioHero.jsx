@@ -15,7 +15,10 @@ const AnimatedStat = ({ value, label, delay = 0 }) => {
 
   return (
     <div className={styles.statBox} ref={ref}>
-      <motion.span className={styles.statNumber}>{rounded}</motion.span>
+      <motion.span className={styles.statNumber}>
+        {rounded}
+        <span className={styles.statPlus}>+</span>
+      </motion.span>
       <p className={styles.statLabel}>{label}</p>
     </div>
   );

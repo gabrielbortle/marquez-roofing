@@ -111,12 +111,21 @@
 .statNumber {
   font-size: 2rem;
   font-weight: 700;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.1rem;
 }
 
 .statLabel {
   font-size: 1rem;
   opacity: 0.9;
   margin-top: 0.2rem;
+}
+
+.statPlus {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 /* ✨ MOBILE STYLING */
