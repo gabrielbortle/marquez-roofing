@@ -1,6 +1,6 @@
 'use client';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { motion, useMotionValue, useMotionValueEvent, animate } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import styles from '../PortfolioHero/PortfolioHero.module.css';
 
 const AnimatedStat = ({ value, label, delay = 0 }) => {
